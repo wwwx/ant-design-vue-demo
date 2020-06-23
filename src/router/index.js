@@ -1,6 +1,9 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Login from '@/pages/login';
+import Dashboard from '@/pages/dashboard';
+import Home from '@/pages/home';
+import AuthorityRoutes from './route-authority';
 
 Vue.use(VueRouter);
 
@@ -10,18 +13,24 @@ const routes = [
     redirect: 'login',
   },
   {
+    path: '/dashboard',
+    name: 'dashboard',
+    component: Dashboard,
+  },
+  {
+    path: '/home',
+    name: 'home',
+    component: Home,
+    redirect: '/home/authority',
+    children: [
+      // Authority Management
+      AuthorityRoutes,
+    ]
+  },
+  {
     path: '/login',
     name: 'login',
     component: Login,
-  },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/About.vue'),
   },
   {
     path: '*',

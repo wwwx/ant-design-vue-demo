@@ -1,26 +1,22 @@
-import Vue from 'vue';
-import Form from 'ant-design-vue/lib/form';
-import Button from 'ant-design-vue/lib/button';
-import Input from 'ant-design-vue/lib/input';
-import Icon from 'ant-design-vue/lib/icon';
+
 import 'ant-design-vue/lib/form/style/css';
 import 'ant-design-vue/lib/button/style/css';
 import 'ant-design-vue/lib/input/style/css';
 import 'ant-design-vue/lib/icon/style/css';
+import 'ant-design-vue/lib/layout/style/css';
+import 'ant-design-vue/lib/menu/style/css';
+import 'ant-design-vue/lib/breadcrumb/style/css';
 
-Vue.use(Form);
+import Vue from 'vue';
+import { Form, Button, Input, Icon, Layout, Menu, Breadcrumb} from 'ant-design-vue';
+
+Vue.use(Form)
+  .use(Button)
+  .use(Input)
+  .use(Icon)
+  .use(Layout)
+  .use(Menu)
+  .use(Breadcrumb)
+
 Vue.prototype.$form = Form;
 
-/**
- * You can register global components here and use them as a plugin in your main Vue instance
- */
-
-const antDesignComponents = {
-  install(Vue) {
-    Vue.component(Button.name, Button);
-    Vue.component(Input.name, Input);
-    Vue.component(Icon.name, Icon);
-  },
-};
-
-export default antDesignComponents;

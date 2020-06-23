@@ -1,12 +1,15 @@
 <template>
   <div class="page-home">
-    home page
+    <dva-layout></dva-layout>
   </div>
 </template>
 
 <script>
+import Layout from '@/layout';
 export default {
     name: 'Home',
-    components: {}
+    components: {
+      'dva-layout': Layout
+    }
 }
 </script>
