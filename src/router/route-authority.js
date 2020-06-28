@@ -1,10 +1,10 @@
 export default {
     path: 'authority',
-    name: 'authority',
     meta: {
       title: 'Authority Management'
     },
     components: {
+      aside: () => import('@/layout/sidebar/AuthoritySideMenu.vue'),
       main: {
         render: (h) => h('router-view')
       }

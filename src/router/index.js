@@ -4,6 +4,7 @@ import Login from '@/pages/login';
 import Dashboard from '@/pages/dashboard';
 import Home from '@/pages/home';
 import AuthorityRoutes from './route-authority';
+import ParamsRoutes from './route-params';
 
 Vue.use(VueRouter);
 
@@ -25,6 +26,8 @@ const routes = [
     children: [
       // Authority Management
       AuthorityRoutes,
+      // Params Management
+      ParamsRoutes,
     ]
   },
   {
