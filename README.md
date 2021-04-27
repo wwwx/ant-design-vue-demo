@@ -24,7 +24,7 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-^
+
 ## screenshot
 
 <img src="./screenshot/screenshot-localhost_8080-2021.04.28-00_32_40.png" />
