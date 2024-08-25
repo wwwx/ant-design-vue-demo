@@ -1,7 +1,5 @@
 <template>
-  <div>
-    <button>Test Button</button>
-  </div>
+  <button>Test Button</button>
 </template>
 <script>
 export default {

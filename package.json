@@ -1,7 +1,7 @@
 {
   "name": "@czhw/demo-component-vue2",
   "version": "0.1.2",
-  "main": "packages/index.js",
+  "main": "src/packages/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
